@@ -2,7 +2,9 @@ package com.example.chatroom.server;
 
 import com.example.chatroom.server.command.CommandHandler;
 import com.example.chatroom.server.command.CommandRegistry;
+import com.example.chatroom.server.command.impl.CreateCommand;
 import com.example.chatroom.server.command.impl.HelpCommand;
+import com.example.chatroom.server.command.impl.JoinCommand;
 import com.example.chatroom.server.core.ClientHandler;
 import com.example.chatroom.server.core.ConnectionManager;
 import com.example.chatroom.server.core.RoomManager;
@@ -122,7 +124,8 @@ public class ChatRoomServer {
      * Registers the available commands for the server.
      */
     private void registerCommands() {
-        // todo: register other commands here
+        registry.register(new CreateCommand(roomManager));
+        registry.register(new JoinCommand(roomManager));
         registry.register(new HelpCommand(registry));
     }
 
