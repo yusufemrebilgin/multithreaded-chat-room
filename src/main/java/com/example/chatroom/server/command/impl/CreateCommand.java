@@ -10,7 +10,7 @@ import com.example.chatroom.server.model.User;
 @CommandInfo(
         cmd = "create",
         description = "Creates a new chat room.",
-        usage = "/create <room-name> <room-pw>"
+        usage = "/create <room-name> [room-password]"
 )
 public class CreateCommand implements Command {
 
