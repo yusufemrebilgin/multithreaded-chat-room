@@ -5,6 +5,7 @@ import com.example.chatroom.server.command.CommandRegistry;
 import com.example.chatroom.server.command.impl.CreateCommand;
 import com.example.chatroom.server.command.impl.HelpCommand;
 import com.example.chatroom.server.command.impl.JoinCommand;
+import com.example.chatroom.server.command.impl.LeaveCommand;
 import com.example.chatroom.server.core.ClientHandler;
 import com.example.chatroom.server.core.ConnectionManager;
 import com.example.chatroom.server.core.RoomManager;
@@ -126,6 +127,7 @@ public class ChatRoomServer {
     private void registerCommands() {
         registry.register(new CreateCommand(roomManager));
         registry.register(new JoinCommand(roomManager));
+        registry.register(new LeaveCommand(roomManager));
         registry.register(new HelpCommand(registry));
     }
 
