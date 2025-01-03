@@ -27,7 +27,7 @@ public class HelpCommand implements Command {
 
         ClientConnection connection = user.getConnection();
         if (args.length == 0) {
-            connection.send(registry.getCommandInfo("help"));
+            connection.send(registry.getHelpMessage());
             return;
         }
 

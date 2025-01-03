@@ -41,14 +41,14 @@ public class ApplicationConfig {
             > Welcome to the chat-room application!
             > Here's how you can get started!:
                 - Type `create` to create a new room
-                - Usage: /create <room-name> <room-password>
+                - Usage: /create <room-name> [room-password]
             
                 - Type `join` to join an existing room
-                - Usage: /join <room-name> <room-password>
+                - Usage: /join <room-name> [room-password]
             
             > Need more help?
                 - Type `/help` to see all commands.
-                - Type `/help <command-name>` for details about a specific command.
+                - Type `/help [command]` for details about a specific command.
             """;
 
     /**
